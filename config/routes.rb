@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-#   set routing info for index and about
-  get 'welcome/index'
-  get 'welcome/about'
+  
+  #   set routing for post controller 
+  resources :posts
 
-#   declare default page
+  #   about route
+  get 'about' => 'welcome#about'
+
+  #   declare default page
   root to: 'welcome#index'
 end
