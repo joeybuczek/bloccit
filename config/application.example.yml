@@ -1,0 +1,5 @@
+# Email authentication
+SENDGRID_USERNAME:
+SENDGRID_PASSWORD:
+# Token for Rails earlier than 4.1
+SECRET_KEY_BASE:
