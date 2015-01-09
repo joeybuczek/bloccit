@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Ruby version
+ruby '2.1.2'
+
 # Bootstrap Sass
 gem 'bootstrap-sass', '~> 3.1.1'
 
