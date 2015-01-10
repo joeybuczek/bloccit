@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  #   set routing for users controller
   devise_for :users
-  resources :users, only [:update]
+  resources :users, only: [:update]
+  
   #   set routing for post controller 
   resources :topics do
     resources :posts, except: [:index]
