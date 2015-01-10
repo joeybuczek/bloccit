@@ -1,0 +1,264 @@
+=> Booting WEBrick
+=> Rails 4.1.8 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Ctrl-C to shutdown server
+
+
+Started GET "/" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 338ms (Views: 311.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:12 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/topics.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 108.183.222.106 at 2015-01-09 03:10:13 +0000
+
+
+Started GET "/users/sign_up" for 108.183.222.106 at 2015-01-09 03:10:14 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (900.5ms)
+Completed 200 OK in 1142ms (Views: 1137.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 108.183.222.106 at 2015-01-09 03:10:31 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tx32n/9iJ5z1mptEj5THilDm6tQLd6cqLMdtpqSYS/M=", "user"=>{"name"=>"joey", "email"=>"joey@butzik.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joey@butzik.com' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = '4d445910b0142d13e4ff3fb7831427654a83c82ca8442ab9a8882a9a688044f6'  ORDER BY "users"."id" ASC LIMIT 1
+Binary data inserted for `string` type on column `confirmation_token`
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["confirmation_sent_at", "2015-01-09 03:10:32.506835"], ["confirmation_token", "4d445910b0142d13e4ff3fb7831427654a83c82ca8442ab9a8882a9a688044f6"], ["created_at", "2015-01-09 03:10:31.398399"], ["email", "joey@butzik.com"], ["encrypted_password", "$2a$10$au9QBAMkYRqzjGdbJPSZUuYTNDux0e6IDPSXhbY/6uFVgvElhTDXi"], ["name", "joey"], ["updated_at", "2015-01-09 03:10:31.398399"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 188.3ms
+
+Sent mail to joey@butzik.com (312.9ms)
+Date: Fri, 09 Jan 2015 03:10:32 +0000
+From: joe.buczek@gmail.com
+Reply-To: joe.buczek@gmail.com
+To: joey@butzik.com
+Message-ID: <54af46a8ae814_24c29db4d883717@bloc-assignment-2-174071.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome joey@butzik.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=x6vgFdfNiwWsu22vx3f5">Confirm my account</a></p>
+
+  [1m[35m (0.4ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 1732ms
+
+Net::SMTPAuthenticationError (535 Authentication failed: Bad username / password
+):
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/net/smtp.rb:969:in `check_auth_response'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/net/smtp.rb:740:in `auth_plain'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/net/smtp.rb:732:in `authenticate'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/net/smtp.rb:567:in `do_start'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/net/smtp.rb:520:in `start'
+  mail (2.6.3) lib/mail/network/delivery_methods/smtp.rb:112:in `deliver!'
+  mail (2.6.3) lib/mail/message.rb:2141:in `do_delivery'
+  mail (2.6.3) lib/mail/message.rb:236:in `block in deliver'
+  actionmailer (4.1.8) lib/action_mailer/base.rb:527:in `block in deliver_mail'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionmailer (4.1.8) lib/action_mailer/base.rb:525:in `deliver_mail'
+  mail (2.6.3) lib/mail/message.rb:236:in `deliver'
+  devise (3.4.1) lib/devise/models/authenticatable.rb:178:in `send_devise_notification'
+  devise (3.4.1) lib/devise/models/confirmable.rb:102:in `send_confirmation_instructions'
+  devise (3.4.1) lib/devise/models/confirmable.rb:158:in `send_on_create_confirmation_instructions'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:221:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:221:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:215:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:215:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  activerecord (4.1.8) lib/active_record/callbacks.rb:306:in `_create_record'
+  activerecord (4.1.8) lib/active_record/timestamp.rb:57:in `_create_record'
+  activerecord (4.1.8) lib/active_record/persistence.rb:483:in `create_or_update'
+  activerecord (4.1.8) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  activerecord (4.1.8) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.1.8) lib/active_record/persistence.rb:103:in `save'
+  activerecord (4.1.8) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.1.8) lib/active_record/attribute_methods/dirty.rb:21:in `save'
+  activerecord (4.1.8) lib/active_record/transactions.rb:268:in `block (2 levels) in save'
+  activerecord (4.1.8) lib/active_record/transactions.rb:329:in `block in with_transaction_returning_status'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/database_statements.rb:201:in `block in transaction'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/database_statements.rb:209:in `within_new_transaction'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/database_statements.rb:201:in `transaction'
+  activerecord (4.1.8) lib/active_record/transactions.rb:208:in `transaction'
+  activerecord (4.1.8) lib/active_record/transactions.rb:326:in `with_transaction_returning_status'
+  activerecord (4.1.8) lib/active_record/transactions.rb:268:in `block in save'
+  activerecord (4.1.8) lib/active_record/transactions.rb:283:in `rollback_active_record_state!'
+  activerecord (4.1.8) lib/active_record/transactions.rb:267:in `save'
+  devise (3.4.1) app/controllers/devise/registrations_controller.rb:19:in `create'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/mapper.rb:45:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/action/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/action/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/action/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/action/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.3ms)
+Exiting
