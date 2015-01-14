@@ -56,6 +56,13 @@ gem 'pundit'
 # Redcarpet - Markdown in posts
 gem 'redcarpet'
 
+# Image uploading/manipulation
+gem 'carrierwave'
+gem 'mini_magick'
+
+# fog for use with Amazon S3 image storage
+gem 'fog'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
