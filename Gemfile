@@ -63,6 +63,9 @@ gem 'mini_magick'
 # fog for use with Amazon S3 image storage
 gem 'fog'
 
+# Pagination
+gem 'will_paginate', '~> 3.0.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
