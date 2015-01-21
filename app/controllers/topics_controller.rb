@@ -1,6 +1,14 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.paginate(page: params[:page], per_page: 10)
+    @topics = Topic.paginate(page: params[:page], per_page: 5)
+    # The array returned here is an array of collections
+    # Get total num of pages from array count
+    @total_pages = @topics.count
+    # Get the starting page
+    @first_page = @topics[1]
+    # Generate hash to send to will_paginate helper method
+    @paginate_hash = { total: pages: @total_pages, first_page: @first_page }
+    # @topics = Topic.all
     authorize @topics
   end
 
@@ -12,6 +20,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
+    # @posts = @topic.posts
     authorize @topic
   end
 
