@@ -15,9 +15,17 @@
     
     <p><%= @post.markdown_body %></p>
   </div>
+  
   <div class="col-md-4">
     <% if policy(@post).edit? %>
-      <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
+      <%= link_to "Edit post", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
     <% end %>
   </div>
+  
+  <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
+  
+  <% @comments.each do |c| %>
+    <%= render partial: 'comments/comment', locals: { comment: c } %>
+  <% end %>
+  
 </div>
