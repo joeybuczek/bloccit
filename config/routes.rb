@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   set routing for topic, post, and comment controllers
   resources :topics do
     resources :posts, except: [:index] do
-      resources :comments, only: [:create]
+      resources :comments, only: [:create, :destroy]
     end
   end
 
