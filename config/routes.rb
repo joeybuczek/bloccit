@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   
   #   set routing for topic, post, and comment controllers
   resources :topics do
-    resources :posts, except: [:index] do
-      resources :comments, only: [:create, :destroy]
-    end
-  end
+     resources :posts, except: [:index]
+   end
+ 
+   resources :posts, only: [] do
+     resources :comments, only: [:create, :destroy]
+   end
 
   #   about route
   get 'about' => 'welcome#about'
