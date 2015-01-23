@@ -31,10 +31,14 @@
   <% end %>
   
   <div class="col-mid-12">
-    <p><strong>Comments</strong></p>
+    <p><strong> <%= @comments.count %> Comments</strong></p>
     <hr>
+    <% counter = 0 %>
     <% @comments.each do |comment| %>
-      <%= render partial: 'comments/comment', locals: { comment: comment } %>
+      <% counter += 1 %>
+      <% if counter <= @comments.count %>
+        <%= render partial: 'comments/comment', locals: { comment: comment } %>
+      <% end %>
     <% end %>
   </div>
   
