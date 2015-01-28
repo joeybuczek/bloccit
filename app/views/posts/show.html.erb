@@ -41,10 +41,8 @@
     <div class="col-mid-12">
       <p><strong> <%= @comments.count %> Comments</strong></p>
       <hr>
-      <% counter = 0 %>
-      <% @comments.each do |comment| %>
-        <% counter += 1 %>
-        <% if counter <= @comments.count %>
+      <% @comments.each_with_index do |comment, index| %>
+      <% unless index >= @comments.count %>
           <%= render partial: 'comments/comment', locals: { comment: comment } %>
         <% end %>
       <% end %>
