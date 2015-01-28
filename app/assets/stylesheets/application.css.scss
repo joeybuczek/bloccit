@@ -1,3 +1,5 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+// @import "bootstrap-sprockets";
 @import "bootstrap";
 
 // Users
@@ -36,4 +38,10 @@
 // Comments
 .form-group-indent {
   margin-left: 15px;
+}
+
+// Votes
+.vote-arrows {
+  width: 40px;
+  text-align: center;
 }

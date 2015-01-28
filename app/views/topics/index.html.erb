@@ -10,7 +10,7 @@
           </h4>
           <small>
             <%= topic.description %>
-            <br/><i class="num-posts"><%= topic.posts.count %> current posts</i>
+            <br/><i class="num-posts"><%= pluralize(topic.posts.count, 'post') %> </i>
           </small>
         </div>
       </div>
