@@ -20,9 +20,10 @@ group :development do
   gem 'sqlite3'
 end
 
-# Testing with RSpec
+# Testing with RSpec & Capybara
 group :test do
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara'
 end
 
 # Use SCSS for stylesheets
