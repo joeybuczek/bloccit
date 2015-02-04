@@ -10,6 +10,15 @@ module ApplicationHelper
     end
   end
   
+  # Set CSS classes for up/down_vote links ('current_user' accessed via Devise, 'post' passed in with method argument)
+  def up_vote_link_classes(post)
+    "glyphicon glyphicon-chevron-up #{(current_user.voted(post) && current_user.voted(post).up_vote?) ? 'voted' : '' }"
+  end
+  
+  def down_vote_link_classes(post)
+    "glyphicon glyphicon-chevron-down #{(current_user.voted(post) && current_user.voted(post).down_vote?) ? 'voted' : '' }"
+  end
+  
 #   # Leaving the following method for future reference with passing a block
 #   def form_group_tag(errors, &block)
 #     if errors.any?
