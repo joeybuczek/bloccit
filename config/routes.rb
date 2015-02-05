@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   #   set routing for users controller
   devise_for :users
-  resources :users, only: [:update]
+  resources :users, only: [:update, :show]
   
   #   set routing for topic, post, and comment controllers
   resources :topics do
