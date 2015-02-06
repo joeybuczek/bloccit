@@ -11,8 +11,10 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
     authorize @topic
+      # Note that we also moved the @posts definition below the authorization. 
+      # If the current user isn't authorized to see the posts, it's a waste of time to load them first.
+    @posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 10)
   end
 
   def edit
