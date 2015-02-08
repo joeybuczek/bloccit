@@ -2,15 +2,14 @@ require 'rails_helper'
 
 describe VotesController do 
 
-  include TestFactories
   include Devise::TestHelpers
 
   describe 'up-votes and down-votes' do
   
     before do
       request.env["HTTP_REFERER"] = '/'
-      @user = authenticated_user
-      @post = associated_post
+      @user = create(:user)
+      @post = create(:post, user: @user)
       sign_in @user
     end
   
