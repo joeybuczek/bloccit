@@ -72,6 +72,9 @@ gem 'fog'
 # Pagination
 gem 'will_paginate', '~> 3.0.5'
 
+# Monitoring Performance with New Relic (on Heroku)
+gem 'newrelic_rpm'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
