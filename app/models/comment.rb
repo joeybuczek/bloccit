@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
   belongs_to :user
   
   # make sure that comments are always ordered consistently in descending order
-  default_scope { order('updated_at DESC') }
+  default_scope { order('updated_at ASC') }
   
   validates :body, length: { minimum: 5 }, presence: true
   validates :user, presence: true
